@@ -95,6 +95,12 @@ namespace FastGithub
         /// <returns></returns>
         public static ProductionVersion Parse(string productionVersion)
         {
+            var parts = productionVersion.Split("+");
+            if (parts.Length < 2)
+            {
+                // 如果没有子版本号，子版本号设为空字符串
+                return new ProductionVersion(Version.Parse(parts[0]), string.Empty);
+            }
             string verion = productionVersion.Split("+")[0];
             string subVersion = productionVersion.Split("+")[1];
             return new ProductionVersion(Version.Parse(verion), subVersion);
