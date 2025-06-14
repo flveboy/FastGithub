@@ -3,6 +3,18 @@ github加速神器，解决github打不开、用户头像无法加载、releases
 
 * 原仓库 https://github.com/dotnetcore/fastgithub 已经没有了，所以拿了最新版本改了自用。
 
+## 打包方式
+  ### 创建 publish 目录
+  mkdir -p publish
+  
+  ### 编译不同平台的项目
+  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r win-x64 -o "publish/fastgithub_win-x64" ./FastGithub/FastGithub.csproj
+  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r linux-x64 -o "publish/fastgithub_linux-x64" ./FastGithub/FastGithub.csproj
+  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r linux-arm64 -o "publish/fastgithub_linux-arm64" ./FastGithub/FastGithub.csproj
+  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r osx-x64 -o "publish/fastgithub_osx-x64" ./FastGithub/FastGithub.csproj
+  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r osx-arm64 -o "publish/fastgithub_osx-arm64" ./FastGithub/FastGithub.csproj
+
+
 ### 1 写在前面
 * **fastgithub不具备“翻墙”功能,也没有相关的计划**
 * **fastgithub不支持Windows7等已被发行方停止支持的操作系统，并且也不会主动提供支持**
