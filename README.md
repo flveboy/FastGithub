@@ -8,11 +8,11 @@ github加速神器，解决github打不开、用户头像无法加载、releases
   mkdir -p publish
   
   ### 编译不同平台的项目
-  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r win-x64 -o "publish/fastgithub_win-x64" ./FastGithub/FastGithub.csproj
-  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r linux-x64 -o "publish/fastgithub_linux-x64" ./FastGithub/FastGithub.csproj
-  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r linux-arm64 -o "publish/fastgithub_linux-arm64" ./FastGithub/FastGithub.csproj
-  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r osx-x64 -o "publish/fastgithub_osx-x64" ./FastGithub/FastGithub.csproj
-  dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r osx-arm64 -o "publish/fastgithub_osx-arm64" ./FastGithub/FastGithub.csproj
+  - dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r win-x64 -o "publish/fastgithub_win-x64" ./FastGithub/FastGithub.csproj
+  - dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r linux-x64 -o "publish/fastgithub_linux-x64" ./FastGithub/FastGithub.csproj
+  - dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r linux-arm64 -o "publish/fastgithub_linux-arm64" ./FastGithub/FastGithub.csproj
+  - dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r osx-x64 -o "publish/fastgithub_osx-x64" ./FastGithub/FastGithub.csproj
+  - dotnet publish -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true --self-contained -r osx-arm64 -o "publish/fastgithub_osx-arm64" ./FastGithub/FastGithub.csproj
 
 
 ### 1 写在前面
